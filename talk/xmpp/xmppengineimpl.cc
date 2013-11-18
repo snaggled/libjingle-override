@@ -339,7 +339,9 @@ void XmppEngineImpl::IncomingStanza(const XmlElement* stanza) {
     std::string type = stanza->Attr(QN_TYPE);
     if (stanza->Name() == QN_IQ &&
         !(type == "error" || type == "result")) {
+#ifndef IOS_XMPP_FRAMEWORK
       SendStanzaError(stanza, XSE_FEATURE_NOT_IMPLEMENTED, STR_EMPTY);
+#endif
     }
   }
 }
