@@ -176,6 +176,7 @@
   'targets': [
     {
       'target_name': 'libjingle',
+      'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
       'type': 'static_library',
       'sources': [
         'talk/base/basictypes.h',
@@ -455,6 +456,7 @@
     # properly.
     {
       'target_name': 'libjingle_p2p',
+      'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
       'type': 'static_library',
       'sources': [
         'talk/p2p/base/asyncstuntcpsocket.cc',
@@ -542,6 +544,7 @@
     },  # target libjingle_p2p
     {
       'target_name': 'libjingle_peerconnection',
+      'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
       'type': 'static_library',
       'defines': [
         'HAVE_WEBRTC_VIDEO',
@@ -686,6 +689,7 @@
     },  # target libjingle_peerconnection
     {
       'target_name': 'libjingle_audio_only',
+      'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
       'type': 'static_library',
       'defines': [
         'HAVE_WEBRTC_VOICE',
@@ -797,6 +801,7 @@
     },  # target libjingle_audio_only
     {
       'target_name': 'peerconnection_server',
+      'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
       'type': 'executable',
       'sources': [
         'talk/examples/peerconnection/server/data_socket.cc',
